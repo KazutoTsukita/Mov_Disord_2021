@@ -589,7 +589,7 @@ We further assessed the interaction effect of lymphocyte count at the baseline o
 
 ##**Sensitivity analyses(1)**  
 
-We conducted sensitivity analyses using different follow-up periods. After this code, we will get the table entitled "interaction_effect_table_BL_Lymphocytes_sensitivity_analyses" which corresponds to Supplementary Table 3.  
+We conducted sensitivity analyses using different follow-up periods. After this code, we will get the table entitled "interaction_effect_table_BL_Lymphocytes_sensitivity_analyses" which corresponds to Supplementary Table 4.  
 
 
     all<-c()
@@ -689,7 +689,7 @@ We conducted sensitivity analyses using different follow-up periods. After this 
 <br />  
 
 ##**Sensitivity analyses(2)**  
-Finally, we also conducted sensitivity analyses using different follow-up periods. After this code, we will get the table entitled "interaction_effect_table_BL_Lymphocytes_sensitivity_analyses" which corresponds to Supplementary Table 3.  
+Finally, we also conducted sensitivity analyses using multiple imputation methodology. After this code, we will get the table entitled "interaction_effect_table_BL_Lymphocytes_sensitivity_analyses" which corresponds to Supplementary Table 5.  
 
       MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS_e4 <- MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS_e4 %>% dplyr::filter(Elapsed_years<=2)
       imp<-MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS_e4 <- MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS_e4  %>% dplyr::select(MOCA_Total_score,PATNO,Elapsed_years,BL_Lymphocytes,Age,LEDD_sum,Disease_duration_diagnosis,Sex,base_UPSIT_total,base_RBDSQ_total_score)
