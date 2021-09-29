@@ -1,7 +1,8 @@
 ---
 R code for the paper entitled Baseline lower circulating lymphocyte count predicts
 ---
-This is the original R code for the manuscript whose DOI is "10.1002/mds.28799". Please enjoy!  
+This is the original R code for the manuscript whose DOI is "10.1002/mds.28799". For any question, you can contact Kazuto Tsukita (kazusan@kuhp.kyoto-u.ac.jp).
+
     <br />
 ##**Preparation for analysis**  
 We downloaded all data to "~/download/" from PPMI website. We used following libraries for subsequent analyses.
