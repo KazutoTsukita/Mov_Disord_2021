@@ -1,15 +1,14 @@
 ---
 R code for the paper entitled Baseline lower circulating lymphocyte count predicts
 ---
-This is the original R code for the manuscript whose DOI is "10.1002/mds.28799". Please enjoy!
-<br />
-<br />
+This is the original R code for the manuscript whose DOI is "10.1002/mds.28799". Please enjoy!  
+
 ##**Preparation for analysis**  
 We downloaded all data to "~/download/" from PPMI website. We used following libraries for subsequent analyses.
-```{r}
-suppressMessages(library(tidyverse)); library(stringr)  %>% suppressMessages(); library(gtsummary)  %>% suppressMessages(); library(lubridate)  %>% suppressMessages();library(lme4)  %>% suppressMessages();library(plyr)  %>% suppressMessages();library(Amelia) %>% suppressMessages()
-options(gtsummary.pvalue_fun = function(x) style_pvalue(x, digits = 2))
-```
+
+    suppressMessages(library(tidyverse)); library(stringr)  %>% suppressMessages(); library(gtsummary)  %>% suppressMessages(); library(lubridate)  %>%           suppressMessages();library(lme4)  %>% suppressMessages();library(plyr)  %>% suppressMessages();library(Amelia) %>% suppressMessages()
+    options(gtsummary.pvalue_fun = function(x) style_pvalue(x, digits = 2))
+
 <br />
 <br />
 ##**Identifying PD patients**
