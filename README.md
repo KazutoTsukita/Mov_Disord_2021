@@ -8,19 +8,15 @@ We downloaded all data to "~/download/" from PPMI website. We used following lib
 
     suppressMessages(library(tidyverse)); library(stringr)  %>% suppressMessages(); library(gtsummary)  %>% suppressMessages(); library(lubridate)  %>%           suppressMessages();library(lme4)  %>% suppressMessages();library(plyr)  %>% suppressMessages();library(Amelia) %>% suppressMessages()
     options(gtsummary.pvalue_fun = function(x) style_pvalue(x, digits = 2))
+  
+  
+##**Identifying PD patients**  
+We first identified PD patients from "Primary_Diagnosis.csv".  
+In the "Primary_Diagnosis.csv", Idiopathic PD was coded with "01" in the "PRIMDIAG" column.  
+  
+    PrimaryDiagnosis_PD<-readr::read_csv("~/download/Primary_Diagnosis.csv") %>% dplyr::filter(PRIMDIAG=="01") %>% suppressMessages() %>% suppressWarnings()
+    PrimaryDiagnosis_PD<-PrimaryDiagnosis_PD[order(PrimaryDiagnosis_PD$PATNO,PrimaryDiagnosis_PD$EVENT_ID),]
 
-<br />
-<br />
-##**Identifying PD patients**
-<br />
-We first identified PD patients from "Primary_Diagnosis.csv".
-In the "Primary_Diagnosis.csv", Idiopathic PD was coded with "01" in the "PRIMDIAG" column.
-<br />
-```{r}
-PrimaryDiagnosis_PD<-readr::read_csv("~/download/Primary_Diagnosis.csv") %>% dplyr::filter(PRIMDIAG=="01") %>% suppressMessages() %>% suppressWarnings()
-PrimaryDiagnosis_PD<-PrimaryDiagnosis_PD[order(PrimaryDiagnosis_PD$PATNO,PrimaryDiagnosis_PD$EVENT_ID),]
-```
-<br />
 A few patients undergo 2 evaluations with the same "EVENT_ID", and this causes a problem when this dataset were combined with others by "PATNO" and "EVENT_ID"; therefore, we only used the first one.
 ```{r}
 c<-c()
