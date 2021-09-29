@@ -1,11 +1,9 @@
 # Mov_Disord_2021
 This is the original R code for the manuscript whose DOI is "10.1002/mds.28799".
+
+
 ---
 title: R code for the paper entitled Baseline lower circulating lymphocyte count predicts
-  faster APOE ε4-related longitudinal cognitive decline in Parkinson’s Disease
-output:
-  html_document:
-    df_print: paged
 ---
 
 
