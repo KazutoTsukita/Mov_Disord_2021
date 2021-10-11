@@ -700,7 +700,7 @@ Finally, we also conducted sensitivity analyses using multiple imputation method
       varIndex <- colnames(imp)
 
       impute.out <- amelia(as.data.frame(imp[, varIndex]), idvars = IDS,noms = c("Sex"),m = 100)
-names(impute.out$imputations)<-c(1:100)
+      names(impute.out$imputations)<-c(1:100)
 
       Partner<-c()
       c<-c()
