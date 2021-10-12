@@ -324,7 +324,8 @@ First, we devided the dataset based on the APOE status.
     MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS <- dplyr::bind_rows(MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS_e4,MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS_note4)
 
 
-Then, we created the table. By this code, we get the information on which the Supplementary Table 2 is based.  
+Then, we created the table. By this code, we get the information on which the Supplementary Table 2 is based.
+
     MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS <- MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS %>% dplyr::select("PATNO","EVENT_ID","ApoE_Genotype","Age","Sex","Disease_duration_diagnosis","NHY","LEDD_sum","BL_Lymphocytes","MOCA_Total_score","HVLT_DELAYED_RECALL_T","JLO_RAW","SDMT_correct","sum_UPDRS_part3","UPSIT_total","RBDSQ_total_score","ORIG_ENTRY","ORIG_ENTRY_LEDD","Elapsed_months","Elapsed_years","ApoE_e4_allele")
 
     MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS$ApoE_Genotype<-factor(MOCA_PD_APOE_LymphoBL_HVLT_JLO_SDMT_UPDRS$ApoE_Genotype,levels=c("e2/e2","e3/e2","e2/e4","e3/e3","e4/e3","e4/e4"))
